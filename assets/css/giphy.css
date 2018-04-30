@@ -7,6 +7,8 @@
   font-size: 20px;
   border: #333 0.2px solid;
   font-family: "Lato", sans-serif;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .queryBtn:hover {
