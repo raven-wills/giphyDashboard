@@ -59,6 +59,7 @@ function addEventListenerToBtns() {
           });
 
         $("#giphyResults").append(responseImage);
+        $("#giphyResults").append(image_object.rating);
       });
     });
   });
