@@ -59,7 +59,9 @@ function addEventListenerToBtns() {
           });
 
         $("#giphyResults").append(responseImage);
-        $("#giphyResults").append(image_object.rating);
+        var rating = image_object.rating;
+        var p = $("<p>").text(rating);
+        $("#giphyResults").append(p);
       });
     });
   });
