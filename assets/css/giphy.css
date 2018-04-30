@@ -1,12 +1,12 @@
 .queryBtn {
   border-radius: 50%;
-  margin: 10px 5px;
-  width: 75px;
+  margin: 1px 5px;
+  width: 80px;
   padding: 30px 0;
   text-align: center;
   font-size: 20px;
   border: #333 0.2px solid;
-  font-family: "Chicle", cursive;
+  font-family: "Lato", sans-serif;
 }
 
 .queryBtn:hover {
@@ -25,7 +25,8 @@
 }
 
 #btnTextInput {
-  margin: 3% 0;
+  margin-top: 12%;
+  margin-bottom: 3%;
   width: 20%;
 }
 
@@ -58,8 +59,6 @@ body {
   text-align: center;
 }
 body {
-  font-family: "Press Start 2P", cursive;
-
   /* W3C */
   background: linear-gradient(
     top,
@@ -171,10 +170,10 @@ body {
 
 h1 {
   position: absolute;
-  top: 25%;
   z-index: 50;
-  font-size: 40px;
-  left: calc(50% - 209px);
+  font-size: 60px;
+  left: calc(50% - 350px);
+  font-family: "Permanent Marker", cursive;
 }
 h2 {
   position: absolute;
@@ -188,10 +187,10 @@ h2 span {
 }
 h1,
 h2 {
-  color: #fff;
-  text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777,
+  color: #333;
+  /* text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777,
     0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333,
-    0px 8px 7px #001135;
+    0px 8px 7px #001135; */
 }
 div {
   position: relative;
@@ -226,11 +225,18 @@ audio {
 
 /* mobile phone */
 @media screen and (max-device-width: 480px) {
+  html {
+    width: 100vw;
+    height: 100vh;
+  }
   body {
     height: 120%;
+    width: 100vw;
+    overflow: hidden;
   }
   h1 {
     font-size: 25px;
+    left: calc(50% - 170px);
   }
   h2 {
     font-size: 12px;
@@ -247,5 +253,10 @@ audio {
   }
   #counter {
     top: 380px;
+  }
+
+  #btnContainer {
+    max-width: 80%;
+    margin: auto;
   }
 }

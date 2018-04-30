@@ -12,7 +12,8 @@ colors.forEach(function(color) {
 
 // Add button when submit is clicked
 // Button has to have text from input
-$("#addBtn").on("click", function() {
+$("#addBtn").on("click", function(send) {
+  send.preventDefault();
   $("#btnContainer").append(
     "<button class='queryBtn' style='background:" +
       $("#btnTextInput").val() +
@@ -20,6 +21,7 @@ $("#addBtn").on("click", function() {
       $("#btnTextInput").val() +
       "</button>"
   );
+  document.getElementById("btnTextInput").value = null;
   addEventListenerToBtns();
 });
 
@@ -55,20 +57,9 @@ function addEventListenerToBtns() {
               event.target.setAttribute("data-state", "still");
             }
           });
-        console.log(responseImage);
-
-        // var responseImage = $(
-        //   "<img src=" +
-        //     image_object.images.original_still.url +
-        //     " class=responseImage>"
-        // ).on("click", function(e) {
-        //   e.target.src = image_object.images.original.url;
-        //   console.log(image_object.images.original.url);
-        // });
 
         $("#giphyResults").append(responseImage);
       });
-      console.log(response);
     });
   });
 }
